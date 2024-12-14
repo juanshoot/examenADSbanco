@@ -2,6 +2,8 @@
 cuentas = {
     "1234": {"pin": "1111", "saldo": 5000, "movimientos": []},
     "5678": {"pin": "2222", "saldo": 10000, "movimientos": []},
+    "7777": {"pin": "3456", "saldo": 4300, "movimientos": []},
+    "8989": {"pin": "8965", "saldo": 9700, "movimientos": []},
 }
 
 # Validar usuario
@@ -52,7 +54,7 @@ def consultar_movimientos(numero_cuenta):
         return "No hay movimientos recientes."
     return "Últimos movimientos:\n" + "\n".join([f"- {mov}" for mov in movimientos[-5:]])
 
-# Validar entrada numérica
+# Validar entrada de num
 def pedir_numero(mensaje):
     while True:
         try:
@@ -60,7 +62,7 @@ def pedir_numero(mensaje):
         except ValueError:
             print("Por favor, ingrese un número válido.")
 
-# Menú principal
+# Menú inicual
 def menu():
     print("Bienvenido al Cajero")
     numero_cuenta = input("Ingrese su número de cuenta: ")
@@ -94,5 +96,5 @@ def menu():
         else:
             print("Opción no válida.")
 
-# Ejecutar el programa
+
 menu()
